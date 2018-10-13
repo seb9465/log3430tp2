@@ -30,7 +30,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV1E1() {
 		int v = -4;
 		int e = -1;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -42,7 +42,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV1E4() {
 		int v = -4;
 		int e = 20;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -54,7 +54,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV2E1() {
 		int v = 0;
 		int e = -1;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -79,7 +79,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV2E4() {
 		int v = 0;
 		int e = 20;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -91,7 +91,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV3E1() {
 		int v = 4;
 		int e = -1;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -127,7 +127,7 @@ class TP2 {
 	protected void grapheSimpleIntIntV3E4() {
 		int v = 4;
 		int e = 20;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});
 	}
@@ -139,7 +139,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV1P1() {
 		int v = -4;
 		double p = -1.0;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
@@ -151,7 +151,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV1P5() {
 		int v = -4;
 		double p = 1.5;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
@@ -163,7 +163,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV2P1() {
 		int v = 0;
 		double p = -1.0;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
@@ -211,7 +211,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV2P5() {
 		int v = 0;
 		double p = 1.5;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
@@ -223,7 +223,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV3P1() {
 		int v = 10;
 		double p = -1.0;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
@@ -269,7 +269,7 @@ class TP2 {
 	protected void grapheSimpleIntDoubleV3P5() {
 		int v = 10;
 		double p = 1.5;
-		assertThrows(Exception.class, () -> {
+		assertThrows(IllegalArgumentException.class, () -> {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}

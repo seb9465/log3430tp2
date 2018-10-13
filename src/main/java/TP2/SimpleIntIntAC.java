@@ -9,18 +9,6 @@ import org.junit.jupiter.api.Test;
 import edu.princeton.cs.algs4.Graph;
 import edu.princeton.cs.algs4.GraphGenerator;
 
-/**
-   	V1E1 -> a1 = 	<{ v = -4 , e = -1 } 	, { erreur }>
-	V1E4 -> a4 = 	<{ v = -4 , e = 20 } 	, { erreur }>
-	V2E1 -> a5 = 	<{ v = 0 , e = -1 } 	, { erreur }>
-	V2E2 -> a6 = 	<{ v = 0 , e = 0 } 		, { grapheOK }>
-	V2E3 -> a7 = 	<{ v = 0 , e = 0 } 		, { grapheOK }>
-	V2E4 -> a8 = 	<{ v = 0 , e = 20 } 	, { erreur }>
-	V3E1 -> a9 = 	<{ v = 4 , e = -1 } 	, { erreur }>
-	V3E2 -> a10 = 	<{ v = 4 , e = 0 } 		, { grapheOK }>
-	V3E3 -> a11 = 	<{ v = 4 , e = 4 } 		, { grapheOK }>
-	V3E3 -> a12 = 	<{ v = 4 , e = 20 } 	, { erreur }>
- */
 class SimpleIntIntAC {
 	
 	Graph graphe;
@@ -36,6 +24,7 @@ class SimpleIntIntAC {
 
 	/**
 	 * Test a1
+	 * V1E1 -> a1 = 	<{ v = -4 , e = -1 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV1E1() {
@@ -48,6 +37,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a4
+	 * V1E4 -> a4 = 	<{ v = -4 , e = 20 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV1E4() {
@@ -60,6 +50,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a5
+	 * V2E1 -> a5 = 	<{ v = 0 , e = -1 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV2E1() {
@@ -71,8 +62,9 @@ class SimpleIntIntAC {
 	}
 	
 	/**
-	 * Ce test est bon pour le cas V2E2 et le cas V2E3.
 	 * Tests a6 et a7
+	 * V2E2 -> a6 = 	<{ v = 0 , e = 0 } 		, { grapheOK }>
+	 * V2E3 -> a7 = 	<{ v = 0 , e = 0 } 		, { grapheOK }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV2E2() {
@@ -85,6 +77,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a8
+	 * V2E4 -> a8 = 	<{ v = 0 , e = 20 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV2E4() {
@@ -97,6 +90,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a9
+	 * V3E1 -> a9 = 	<{ v = 4 , e = -1 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV3E1() {
@@ -109,6 +103,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a10
+	 * V3E2 -> a10 = 	<{ v = 4 , e = 0 } 		, { grapheOK }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV3E2() {
@@ -121,6 +116,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a11
+	 * V3E3 -> a11 = 	<{ v = 4 , e = 4 } 		, { grapheOK }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV3E3() {
@@ -133,6 +129,7 @@ class SimpleIntIntAC {
 	
 	/**
 	 * Test a12
+	 * V3E3 -> a12 = 	<{ v = 4 , e = 20 } 	, { erreur }>
 	 */
 	@Test
 	protected void grapheSimpleIntIntV3E4() {

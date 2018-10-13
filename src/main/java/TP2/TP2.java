@@ -155,4 +155,122 @@ class TP2 {
 			graphe = GraphGenerator.simple(v, p);
 		});
 	}
+	
+	/**
+	 * Test b6
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV2P1() {
+		int v = 0;
+		double p = -1.0;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
+		});
+	}
+	
+	/**
+	 * Test b7
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV2P2() {
+		int v = 0;
+		double p = 0.0;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), 0, "Expected " + 0 + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test b8
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV2P3() {
+		int v = 0;
+		double p = 0.5;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), 0, "Expected " + 0 + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test b9
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV2P4() {
+		int v = 0;
+		double p = 1.0;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), 0, "Expected " + 0 + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test b10
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV2P5() {
+		int v = 0;
+		double p = 1.5;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
+		});
+	}
+	
+	/**
+	 * Test b11
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV3P1() {
+		int v = 10;
+		double p = -1.0;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
+		});
+	}
+	
+	/**
+	 * Test b12
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV3P2() {
+		int v = 10;
+		double p = 0.0;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), 0, "Expected " + 0 + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test b13
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV3P3() {
+		int v = 10;
+		double p = 0.5;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+	}
+	
+	/**
+	 * Test b14
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV3P4() {
+		int v = 10;
+		double p = 1.0;
+		graphe = GraphGenerator.simple(v, p);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+	}
+	
+	/**
+	 * Test b15
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV3P5() {
+		int v = 10;
+		double p = 1.5;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
+		});
+	}
 }

@@ -1080,4 +1080,94 @@ class TP2 {
 			graphe = GraphGenerator.bipartite(v1, v2, p);
 		});
 	}
+	
+	/**
+	 * Test e1
+	 */
+	@Test
+	protected void grapheRegularV1K1() {
+		int v = -1;
+		int k = -1;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.regular(v, k);
+		});
+	}
+	
+	/**
+	 * Test e4
+	 */
+	@Test
+	protected void grapheRegularV2K1() {
+		int v = 4;
+		int k = -1;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.regular(v, k);
+		});
+	}
+	
+	/**
+	 * Test e5
+	 */
+	@Test
+	protected void grapheRegularV2K2() {
+		// Arrange
+		int v = 4;
+		int k = 2;
+		int maxEdges = v * k;
+		
+		// Act
+		graphe = GraphGenerator.regular(v, k);
+		
+		// Assert
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertTrue(graphe.E() <= maxEdges, "Expected less then " + maxEdges + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test e6
+	 */
+	@Test
+	protected void grapheRegularV2K3() {
+		// Arrange
+		int v = 4;
+		int k = 5;
+		int maxEdges = v * k;
+		
+		// Act
+		graphe = GraphGenerator.regular(v, k);
+		
+		// Assert
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertTrue(graphe.E() <= maxEdges, "Expected less then " + maxEdges + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test e7
+	 */
+	@Test
+	protected void grapheRegularV3K1() {
+		int v = 5;
+		int k = -1;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.regular(v, k);
+		});
+	}
+	
+	/**
+	 * Test e8
+	 */
+	@Test
+	protected void grapheRegularV3K2() {
+		// Arrange
+		int v = 5;
+		int k = 2;
+		int maxEdges = v * k;
+		
+		// Act
+		graphe = GraphGenerator.regular(v, k);
+		
+		// Assert
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertTrue(graphe.E() <= maxEdges, "Expected less then " + maxEdges + " edges, got " + graphe.E() + " edges.");
+	}
 }

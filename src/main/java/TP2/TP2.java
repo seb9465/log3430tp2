@@ -23,28 +23,13 @@ class TP2 {
 	void tearDown() throws Exception {
 	}
 	
+	/**
+	 * EC : 
+	 */
 	@Test
 	protected void grapheSimpleIntIntV1E1() {
 		int v = -4;
 		int e = -1;
-		assertThrows(Exception.class, () -> {
-			graphe = GraphGenerator.simple(v, e);
-		});
-	}
-	
-	@Test
-	protected void grapheSimpleIntIntV1E2() {
-		int v = -4;
-		int e = 0;
-		assertThrows(Exception.class, () -> {
-			graphe = GraphGenerator.simple(v, e);
-		});
-	}
-	
-	@Test
-	protected void grapheSimpleIntIntV1E3() {
-		int v = -4;
-		int e = 4;
 		assertThrows(Exception.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
 		});

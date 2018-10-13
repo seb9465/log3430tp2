@@ -24,7 +24,20 @@ class TP2 {
 	}
 	
 	@Test
-	void test1() {
-		assertEquals(true, true);
+	void grapheSimpleIntIntV1E1() {
+		int v = -1;
+		int e = -1;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
+	}
+	
+	@Test
+	private void grapheSimpleIntIntV1E2() {
+		int v = -1;
+		int e = 0;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
 	}
 }

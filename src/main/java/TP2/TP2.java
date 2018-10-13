@@ -495,4 +495,133 @@ class TP2 {
 			graphe = GraphGenerator.bipartite(v1, v2, e);
 		});
 	}
+	
+	/**
+	 * Test c25
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V1E1() {
+		int v1 = 4;
+		int v2 = -4;
+		int e = -4;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
+	
+	/**
+	 * Test c28
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V1E4() {
+		int v1 = 4;
+		int v2 = -4;
+		int e = 20;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
+	
+	/**
+	 * Test c29
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V2E1() {
+		int v1 = 4;
+		int v2 = 0;
+		int e = -4;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
+	
+	/**
+	 * Test c30
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V2E2() {
+		int v1 = 4;
+		int v2 = 0;
+		int e = 0;
+		graphe = GraphGenerator.bipartite(v1, v2, e);
+		assertEquals(graphe.V(), v1, "Expected " + v1 + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test c31
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V2E3() {
+		int v1 = 4;
+		int v2 = 0;
+		int e = 0;
+		graphe = GraphGenerator.bipartite(v1, v2, e);
+		assertEquals(graphe.V(), v1, "Expected " + v1 + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test c32
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V2E4() {
+		int v1 = 4;
+		int v2 = 0;
+		int e = 20;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
+	
+	/**
+	 * Test c33
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V3E1() {
+		int v1 = 4;
+		int v2 = 4;
+		int e = -4;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
+	
+	/**
+	 * Test c34
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V3E2() {
+		int v1 = 4;
+		int v2 = 4;
+		int e = 0;
+		graphe = GraphGenerator.bipartite(v1, v2, e);
+		assertEquals(graphe.V(), v2 + v1, "Expected " + v2 + v1 + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	/**
+	 * Test c35
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V3E3() {
+		int v1 = 4;
+		int v2 = 4;
+		int e = 12;
+		graphe = GraphGenerator.bipartite(v1, v2, e);
+		assertEquals(graphe.V(), v2 + v1, "Expected " + v2 + v1 + " vertices, got " + graphe.V() + " vertices.");
+	}
+	
+	/**
+	 * Test c36
+	 */
+	@Test
+	protected void grapheBipartiIntIntIntV3V3E4() {
+		int v1 = 4;
+		int v2 = 4;
+		int e = 20;
+		assertThrows(IllegalArgumentException.class, () -> {
+			graphe = GraphGenerator.bipartite(v1, v2, e);
+		});
+	}
 }

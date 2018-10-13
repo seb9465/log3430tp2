@@ -71,6 +71,31 @@ class TP2 {
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
 	}
 	
+	@Test
+	protected void grapheSimpleIntIntV3E1() {
+		int v = 4;
+		int e = -1;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
+	}
 	
+	@Test
+	protected void grapheSimpleIntIntV3E2() {
+		int v = 4;
+		int e = 0;
+		graphe = GraphGenerator.simple(v, e);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	@Test
+	protected void grapheSimpleIntIntV3E3() {
+		int v = 4;
+		int e = 4;
+		graphe = GraphGenerator.simple(v, e);
+		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
+		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
 	
 }

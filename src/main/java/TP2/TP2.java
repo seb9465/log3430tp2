@@ -24,7 +24,7 @@ class TP2 {
 	}
 	
 	/**
-	 * EC : 
+	 * Test a1
 	 */
 	@Test
 	protected void grapheSimpleIntIntV1E1() {
@@ -35,6 +35,9 @@ class TP2 {
 		});
 	}
 	
+	/**
+	 * Test a4
+	 */
 	@Test
 	protected void grapheSimpleIntIntV1E4() {
 		int v = -4;
@@ -44,6 +47,9 @@ class TP2 {
 		});
 	}
 	
+	/**
+	 * Test a5
+	 */
 	@Test
 	protected void grapheSimpleIntIntV2E1() {
 		int v = 0;
@@ -55,6 +61,7 @@ class TP2 {
 	
 	/**
 	 * Ce test est bon pour le cas V2E2 et le cas V2E3.
+	 * Tests a6 et a7
 	 */
 	@Test
 	protected void grapheSimpleIntIntV2E2() {
@@ -65,6 +72,9 @@ class TP2 {
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
 	}
 	
+	/**
+	 * Test a8
+	 */
 	@Test
 	protected void grapheSimpleIntIntV2E4() {
 		int v = 0;
@@ -74,6 +84,9 @@ class TP2 {
 		});
 	}
 	
+	/**
+	 * Test a9
+	 */
 	@Test
 	protected void grapheSimpleIntIntV3E1() {
 		int v = 4;
@@ -83,6 +96,9 @@ class TP2 {
 		});
 	}
 	
+	/**
+	 * Test a10
+	 */
 	@Test
 	protected void grapheSimpleIntIntV3E2() {
 		int v = 4;
@@ -92,6 +108,9 @@ class TP2 {
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
 	}
 	
+	/**
+	 * Test a11
+	 */
 	@Test
 	protected void grapheSimpleIntIntV3E3() {
 		int v = 4;
@@ -101,12 +120,39 @@ class TP2 {
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
 	}
 	
+	/**
+	 * Test a12
+	 */
 	@Test
 	protected void grapheSimpleIntIntV3E4() {
 		int v = 4;
 		int e = 20;
 		assertThrows(Exception.class, () -> {
 			graphe = GraphGenerator.simple(v, e);
+		});
+	}
+	
+	/**
+	 * Test b1
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV1P1() {
+		int v = -4;
+		double p = -1.0;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
+		});
+	}
+	
+	/**
+	 * Test b5
+	 */
+	@Test
+	protected void grapheSimpleIntDoubleV1P5() {
+		int v = -4;
+		double p = 1.5;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, p);
 		});
 	}
 }

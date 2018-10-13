@@ -51,6 +51,15 @@ class TP2 {
 	}
 	
 	@Test
+	protected void grapheSimpleIntIntV1E4() {
+		int v = -4;
+		int e = 20;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
+	}
+	
+	@Test
 	protected void grapheSimpleIntIntV2E1() {
 		int v = 0;
 		int e = -1;
@@ -69,6 +78,15 @@ class TP2 {
 		graphe = GraphGenerator.simple(v, e);
 		assertEquals(graphe.V(), v, "Expected " + v + " vertices, got " + graphe.V() + " vertices.");
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
+	}
+	
+	@Test
+	protected void grapheSimpleIntIntV2E4() {
+		int v = 0;
+		int e = 20;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
 	}
 	
 	@Test
@@ -98,4 +116,12 @@ class TP2 {
 		assertEquals(graphe.E(), e, "Expected " + e + " edges, got " + graphe.E() + " edges.");
 	}
 	
+	@Test
+	protected void grapheSimpleIntIntV3E4() {
+		int v = 4;
+		int e = 20;
+		assertThrows(Exception.class, () -> {
+			graphe = GraphGenerator.simple(v, e);
+		});
+	}
 }

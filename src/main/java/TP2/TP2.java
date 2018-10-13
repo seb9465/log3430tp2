@@ -488,7 +488,7 @@ class TP2 {
 	 */
 	@Test
 	protected void grapheBipartiIntIntIntV2V3E4() {
-		int v1 = 4;
+		int v1 = 0;
 		int v2 = 4;
 		int e = 20;
 		assertThrows(IllegalArgumentException.class, () -> {
@@ -624,4 +624,8 @@ class TP2 {
 			graphe = GraphGenerator.bipartite(v1, v2, e);
 		});
 	}
+
+	
+	
+	
 }
